@@ -95,13 +95,13 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1409.2,1048.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1409.2,1166.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Interest Calculate" sap:VirtualizedContainerService.HintSize="449.6,1025.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Interest Calculate" sap:VirtualizedContainerService.HintSize="449.6,1143.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Double" Name="Result" />
         <Variable x:TypeArguments="x:Double" Name="Value" />
@@ -112,7 +112,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InputDialog Options="{x:Null}" DisplayName="Input Period" sap:VirtualizedContainerService.HintSize="334.4,295.2" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Period of Deposit" OptionsString="1;3;5" Title="Period" TopMost="False">
+      <ui:InputDialog Options="{x:Null}" DisplayName="Input Period" sap:VirtualizedContainerService.HintSize="416,327.2" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Period of Deposit" OptionsString="1;3;5" Title="Period" TopMost="False">
         <ui:InputDialog.Result>
           <OutArgument x:TypeArguments="x:Double">
             <CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">Period</CSharpReference>
@@ -139,13 +139,20 @@
           </InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
         <ui:LogMessage.Message>
           <InArgument x:TypeArguments="x:Object">
             <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">"Period: " + Period + " Value: " + Value + " Of Deposit" + " Interest: " + Result</CSharpValue>
           </InArgument>
         </ui:LogMessage.Message>
       </ui:LogMessage>
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,108.8" sap2010:WorkflowViewState.IdRef="MessageBox_1">
+        <ui:MessageBox.Text>
+          <InArgument x:TypeArguments="x:Object">
+            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">"Total de Juros para o \nPeriodo: " + Period +" \ne Valor: " + Value + " \né Igual a: " + Result</CSharpValue>
+          </InArgument>
+        </ui:MessageBox.Text>
+      </ui:MessageBox>
     </Sequence>
   </Sequence>
 </Activity>

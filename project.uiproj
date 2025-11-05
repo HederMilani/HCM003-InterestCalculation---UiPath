@@ -1,0 +1,6 @@
+{
+  "Name": "HCM003-InterestCalculation",
+  "ProjectType": "Process",
+  "Description": "Calculo de Juros",
+  "MainFile": "Main.xaml"
+}
